@@ -4988,6 +4988,7 @@ console.log(ret);
                     }
                 }
     
+                expression = expression.replace(/([A-Z]+)\:([A-Z]+)/g, "$1"+"1:$2"+obj.getData().length);
                 var tokens = expression.match(/([A-Z]+[0-9]+)\:([A-Z]+[0-9]+)/g);
                 if (tokens && tokens.length) {
                     tokensUpdate(tokens);
